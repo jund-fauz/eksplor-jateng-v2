@@ -1,0 +1,130 @@
+p {
+    font-weight: 400;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+}
+
+.container > p.subtitle:where(:not([class~=fw700])) {
+    max-width: 30%;
+}
+
+.cmw {
+    max-width: 50%;
+}
+
+p.cmt-1 {
+    width: 40%;
+}
+
+.cm-1 {
+    margin: 30px 0 -1.5% 0.5% !important;
+}
+
+.cmt-1 {
+    margin-top: 20px !important;
+}
+
+.container > div[class=d-flex] {
+    margin-top: 3% !important;
+    gap: 15%;
+}
+
+.title {
+    font-size: clamp(3em, 8vw, 6.5em);
+}
+
+.subtitle {
+    text-transform: capitalize;
+}
+
+.subtitle:where([class~=fw300]) {
+    font-size: clamp(0.7rem, 2vw, 1.25rem) !important;
+}
+
+.subtitle:where(:not([class~=fw300])) {
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+}
+
+.other-title {
+    font-size: 3rem;
+}
+
+img {
+    margin-top: 40px !important;
+}
+
+img:nth-child(4) {
+    aspect-ratio: 3/2;
+}
+
+.container > p:nth-child(2) {
+    padding-left: 4vw;
+    width: 50%
+}
+
+img:nth-child(3) {
+    margin-top: 80px !important;
+}
+
+@media (max-width: 540px) {
+    *:where(:not([class^=cmt-1])) {
+        text-align: center;
+    }
+
+    .container > .cmt-1 {
+        text-align: start;
+    }
+
+    .other-title {
+        font-size: 2.5rem;
+    }
+
+    .container > .d-flex {
+        justify-content: space-around;
+        gap: 0 !important;
+    }
+
+    .container > p.subtitle:where(:not([class~=fw700])),
+    .cmw {
+        max-width: 100%;
+    }
+
+    .d-flex.text-end > h1 {
+        width: 100%;
+    }
+
+    p.cmt-1 {
+        width: 95%;
+    }
+
+    .container > p:nth-child(2) {
+        padding-left: 0;
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+@media (min-width:541px) and (max-width:769px) {
+    .cmw {
+        max-width: 75%;
+    }
+
+    p.cmt-1 {
+        width: 65%;
+    }
+
+    p:nth-child(2) {
+        padding-left: 2vw;
+    }
+}
+
+@media (max-width: 1100px) {
+    span::after {
+        content: "\a";
+        white-space: pre;
+    }
+}
